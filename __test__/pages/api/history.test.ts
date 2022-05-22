@@ -2,17 +2,17 @@
 
 import { expect, test, describe } from 'vitest'
 import { createMocks } from 'node-mocks-http'
-import historyApiRoute from '../../../pages/api/history'
+import weatherApiRoute from '../../../pages/api/weather'
 import { History } from '../../../@types/history'
 
 describe('api/history', () => {
     test('Should return a history object', async () => {
         const { req, res } = createMocks({
             method: 'GET',
-            query: { q: 'Guadalajara', dt: '2022/05/21' },
+            query: { q: 'Guadalajara' },
         });
 
-        await historyApiRoute(req, res);
+        await weatherApiRoute(req, res);
 
         const responseJson = JSON.parse(res._getData()) as History
 
@@ -34,7 +34,7 @@ describe('api/history', () => {
             query: {},
         });
 
-        await historyApiRoute(req, res);
+        await weatherApiRoute(req, res);
 
         const responseJson = JSON.parse(res._getData())
 
@@ -50,10 +50,10 @@ describe('api/history', () => {
     test('Should return a error', async () => {
         const { req, res } = createMocks({
             method: 'POST',
-            query: { q: 'Guadalajara', dt: '2022/05/21' },
+            query: { q: 'Guadalajara' },
         });
 
-        await historyApiRoute(req, res);
+        await weatherApiRoute(req, res);
 
         const responseJson = JSON.parse(res._getData())
 
