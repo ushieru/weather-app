@@ -11,7 +11,7 @@ Para correr los test usa **.env.test**
 
 Instalacion:
 ```sh
-$ npm run dev
+$ npm i
 ```
 Test:
 ```sh
