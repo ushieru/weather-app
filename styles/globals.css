@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&display=swap");
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+.main-shadow {
+    box-shadow: 0px -4px 25px rgba(255, 255, 255, 0.25), 0px 4px 20px 5px rgba(0, 194, 255, 0.23);
+}
+.main-glass {
+    background: rgba(0, 0, 0, 0.01);
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.05), inset -3px 3px 4px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-374px));
+    }
+}
+.slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slideTrack {
+    animation: scroll 10s linear infinite;
+    display: flex;
+    width: calc(374px * 2);
+}
