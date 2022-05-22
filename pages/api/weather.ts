@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import fetch from 'node-fetch'
 import { APIError, IAPIError } from '../../@types/apiError';
 import { Weather } from '../../@types/weather';
 
@@ -8,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   if (!query) return res.status(400).json(new APIError(400, 'Missing Paramas'))
   const url = buildURL(query)
   const response = await fetch(url, options)
-  const jsonRespose: Weather = await response.json()
+  const jsonRespose = await response.json() as Weather
   if (!response.ok) return res.status(400).json(jsonRespose)
   return res.json(jsonRespose)
 }

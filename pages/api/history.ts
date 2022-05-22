@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import fetch from 'node-fetch'
 import { IAPIError, APIError } from '../../@types/apiError';
 import { History } from '../../@types/history';
 
@@ -9,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   if (!query) return res.status(400).json(new APIError(400, 'Missing Paramas'))
   const url = buildURL(query, date)
   const response = await fetch(url, options)
-  const jsonRespose: History = await response.json()
+  const jsonRespose = await response.json() as History
   if (!response.ok) return res.status(400).json(jsonRespose)
   return res.json(jsonRespose)
 }
