@@ -11,8 +11,8 @@ const Home: NextPage<Props> = ({ maxTemp, minTemp, condition, name, temp }) => {
       <div className="sticky w-[294px] h-[470px] mt-8 ">
         <div className="h-full w-full bg-gradient-to-b from-[#0069A4] to-[#00C2FF] rounded-[50px] main-shadow absolute top-0" />
 
-        <div className="w-full h-full relative">
-          <div className="relative overflow-hidden h-full">
+        <div className="w-full h-full  sticky overflow-hidden rounded-t-[50px]">
+          <div className="relative overflow-hidden  h-full">
             <CloudCarrusel />
             <div className="absolute main-glass inset-0">
               <WeatherIcons />
@@ -25,9 +25,7 @@ const Home: NextPage<Props> = ({ maxTemp, minTemp, condition, name, temp }) => {
             </div>
           </div>
         </div>
-
       </div>
-
     </main>
   </>
 }
