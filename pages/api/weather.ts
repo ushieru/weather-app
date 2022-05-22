@@ -1,14 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fetch from 'node-fetch'
+import dayjs from 'dayjs'
 import { IAPIError, APIError } from '../../@types/apiError';
 import { History } from '../../@types/history';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<History | IAPIError>) {
   if (req.method != 'GET') return res.status(405).json(new APIError(405, 'Method Not Allowed'))
+  const ip = req.socket.remoteAddress
   const query = req.query.q as string
   if (!query) return res.status(400).json(new APIError(400, 'Missing Paramas'))
-  // TODO: Get date and endate with dayjs
-  const url = buildURL(query, 'date', 'endDate')
+  const date = dayjs().subtract(3, 'day').format('YYYY/MM/DD')
+  const endDate = dayjs().add(3, 'day').format('YYYY/MM/DD')
+  const url = buildURL(query, date, endDate)
   const response = await fetch(url, options)
   const jsonRespose = await response.json() as History
   if (!response.ok) return res.status(400).json(jsonRespose)
