@@ -6,7 +6,6 @@ import { History } from '../../@types/history';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<History | IAPIError>) {
   if (req.method != 'GET') return res.status(405).json(new APIError(405, 'Method Not Allowed'))
-  const ip = req.socket.remoteAddress
   const query = req.query.q as string
   if (!query) return res.status(400).json(new APIError(400, 'Missing Paramas'))
   const date = dayjs().subtract(3, 'day').format('YYYY/MM/DD')
