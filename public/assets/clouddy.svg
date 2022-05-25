@@ -1,7 +1,7 @@
 <svg width="294" height="167" viewBox="0 0 294 167" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_6_10222)">
 <g filter="url(#filter0_bi_6_10222)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M99.8154 100.571C92.2577 99.4162 85.5886 96.0257 80.3618 91.1634C76.1424 94.4783 70.61 96.1074 64.8813 95.2318C53.9012 93.5535 46.3579 83.3093 48.0328 72.3507C49.6246 61.9367 58.9683 54.6251 69.3162 55.3644C73.5489 36.2491 91.7583 23.4135 111.156 26.3783C124.182 28.3694 134.569 37.001 139.48 48.3643C141.372 48.2679 143.301 48.3603 145.245 48.6574C160.931 51.055 171.679 65.8735 169.251 81.7555C166.824 97.6376 152.14 108.569 136.454 106.171C130.061 105.194 124.488 102.154 120.293 97.8188C114.069 100.593 107.024 101.673 99.8154 100.571Z" fill="white" fill-opacity="0.9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M99.8155 100.571C92.2578 99.4162 85.5887 96.0257 80.3619 91.1634C76.1424 94.4783 70.61 96.1074 64.8813 95.2318C53.9012 93.5535 46.3579 83.3093 48.0329 72.3507C49.6246 61.9367 58.9684 54.6251 69.3163 55.3644C73.549 36.2491 91.7584 23.4135 111.156 26.3783C124.182 28.3694 134.569 37.001 139.48 48.3643C141.372 48.2679 143.301 48.3603 145.245 48.6574C160.931 51.055 171.679 65.8735 169.251 81.7555C166.824 97.6376 152.14 108.569 136.454 106.171C130.061 105.194 124.488 102.154 120.293 97.8188C114.069 100.593 107.024 101.673 99.8155 100.571Z" fill="white" fill-opacity="0.9"/>
 </g>
 <g filter="url(#filter1_d_6_10222)">
 <circle cx="149.438" cy="70.7469" r="51" transform="rotate(8.6902 149.438 70.7469)" fill="url(#paint0_linear_6_10222)"/>
@@ -14,7 +14,7 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_bi_6_10222" x="27.8" y="5.95288" width="161.793" height="120.548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_bi_6_10222" x="27.8002" y="5.95289" width="161.793" height="120.548" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feGaussianBlur in="BackgroundImage" stdDeviation="10"/>
 <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_6_10222"/>
