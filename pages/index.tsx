@@ -34,7 +34,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const ip = context.req.headers['x-forwarded-for'] || context.req.socket.remoteAddress
   const q = ip == '::1' ? 'Guadalajara' : ip
   console.log(q)
-  const responseHistory = await fetch(`http://localhost:3000/api/weather?q=${q}`)
+  const responseHistory = await fetch(`https://weather-app-chi-bay.vercel.app/api/weather?q=${q}`)
   const { forecast, location } = await responseHistory.json() as History
   const maxTemp = forecast.forecastday[0].day.maxtemp_c
   const minTemp = forecast.forecastday[0].day.mintemp_c
